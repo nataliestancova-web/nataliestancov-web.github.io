@@ -3,67 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barevná Vizitka - Naty</title>
+    <title>Růžová stránka s koníky</title>
     <style>
         body {
-            /* Cute kulatější písmo */
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
-            
-            /* Pastelové duhové pozadí */
-            background: linear-gradient(120deg, #ff9a9e 0%, #fad0c4 30%, #fbc2eb 70%, #a18cd1 100%);
-            
-            /* Jemný puntíkovaný vzor na pozadí pro extra cute efekt */
-            background-image: 
-                linear-gradient(120deg, #ff9a9e 0%, #fad0c4 30%, #fbc2eb 70%, #a18cd1 100%),
-                radial-gradient(circle, rgba(255, 255, 255, 0.4) 10%, transparent 10%);
-            background-size: cover, 20px 20px;
-            
+            background-color: #ffb6c1; 
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-        }
-
-        .karta {
-            background: rgba(255, 255, 255, 0.85); /* Průhledná bílá */
-            padding: 40px;
-            border-radius: 30px; /* Hodně kulaté rohy */
-            
-            /* Stínování s nádechem růžové */
-            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
-            
-            text-align: center;
-            
-            /* Barevný rámeček z více barev */
-            border: 5px solid;
-            border-image: linear-gradient(45deg, #ff6b6b, #f06292, #ba68c8) 1;
-            
+            overflow: hidden;
             position: relative;
         }
 
-        h1 {
-            color: #d81b60; /* Sytě růžová pro jméno */
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.7);
-            margin-bottom: 10px;
+        .obsah {
+            text-align: center;
+            color: #d81b60;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
         }
 
-        p {
-            color: #6a1b9a; /* Tmavě fialová pro text */
-            font-size: 1.4rem;
-            font-weight: bold;
-            line-height: 1.5;
+        h1 { font-size: 2.5rem; margin-top: 0; }
+
+        /* --- STYL TLAČÍTKA --- */
+        .tlacitko {
+            background-color: #ff1493; /* Sytě růžová */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            font-family: 'Comic Sans MS', cursive;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 0 #c71585;
+            transition: all 0.2s;
+            margin-top: 20px;
         }
 
+        .tlacitko:hover {
+            background-color: #ff69b4;
+            transform: scale(1.1);
+        }
+
+        .tlacitko:active {
+            transform: translateY(4px);
+            box-shadow: 0 0 0;
+        }
+
+        /* --- KONÍCI --- */
+        .kun {
+            position: absolute;
+            font-size: 40px;
+            bottom: -60px;
+            z-index: 1;
+        }
+
+        @keyframes beh {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-110vh) rotate(20deg); opacity: 0; }
+        }
+
+        /* Rozmístění koníků */
+        .kun:nth-child(1) { left: 5%;  animation: beh 8s infinite; animation-delay: 0s; }
+        .kun:nth-child(2) { left: 20%; animation: beh 10s infinite; animation-delay: 2s; }
+        .kun:nth-child(3) { left: 40%; animation: beh 7s infinite; animation-delay: 5s; }
+        .kun:nth-child(4) { left: 60%; animation: beh 12s infinite; animation-delay: 1s; }
+        .kun:nth-child(5) { left: 80%; animation: beh 9s infinite; animation-delay: 3s; }
     </style>
 </head>
 <body>
 
-    <div class="karta">
+    <div class="kun">🐎</div>
+    <div class="kun">🐎</div>
+    <div class="kun">🐎</div>
+    <div class="kun :nth-child(4)">🐎</div>
+    <div class="kun">🐎</div>
+
+    <div class="obsah">
         <h1>Štancová Natálie</h1>
-        <p>Ahoj, jmenuji se Naty<br>a mám ráda koně.</p>
+        <p>Ahoj, jmenuji se Naty a mám ráda koně.</p>
+        
+        <button class="tlacitko" onclick="rerdat()">íhaha</button>
     </div>
+
+    <script>
+        function rerdat() {
+            alert("ÍÍÍ-HA-HA! 🐎\nTvoje stránka tě zdraví!");
+            document.body.style.backgroundColor = "#ff69b4"; // Po kliknutí zrůžoví ještě víc
+            setTimeout(() => {
+                document.body.style.backgroundColor = "#ffb6c1";
+            }, 500);
+        }
+    </script>
 
 </body>
 </html>
