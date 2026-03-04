@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barevná Vizitka - Naty</title>
+    <style>
+        body {
+            /* Cute kulatější písmo */
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
+            
+            /* Pastelové duhové pozadí */
+            background: linear-gradient(120deg, #ff9a9e 0%, #fad0c4 30%, #fbc2eb 70%, #a18cd1 100%);
+            
+            /* Jemný puntíkovaný vzor na pozadí pro extra cute efekt */
+            background-image: 
+                linear-gradient(120deg, #ff9a9e 0%, #fad0c4 30%, #fbc2eb 70%, #a18cd1 100%),
+                radial-gradient(circle, rgba(255, 255, 255, 0.4) 10%, transparent 10%);
+            background-size: cover, 20px 20px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .karta {
+            background: rgba(255, 255, 255, 0.85); /* Průhledná bílá */
+            padding: 40px;
+            border-radius: 30px; /* Hodně kulaté rohy */
+            
+            /* Stínování s nádechem růžové */
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+            
+            text-align: center;
+            
+            /* Barevný rámeček z více barev */
+            border: 5px solid;
+            border-image: linear-gradient(45deg, #ff6b6b, #f06292, #ba68c8) 1;
+            
+            position: relative;
+        }
+
+        h1 {
+            color: #d81b60; /* Sytě růžová pro jméno */
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.7);
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #6a1b9a; /* Tmavě fialová pro text */
+            font-size: 1.4rem;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="karta">
+        <h1>Štancová Natálie</h1>
+        <p>Ahoj, jmenuji se Naty<br>a mám ráda koně.</p>
+    </div>
+
+</body>
+</html>
