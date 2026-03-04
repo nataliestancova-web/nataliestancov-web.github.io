@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natyho barevný svět</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #fbc2eb 0%, #a18cd1 100%);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Velké emoji koně uprostřed */
+        .kun-stred {
+            font-size: 120px;
+            z-index: 1;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+            animation: pohupovani 3s ease-in-out infinite;
+        }
+
+        @keyframes pohupovani {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.05); }
+        }
+
+        /* Styl pro bubliny */
+        .bublina-info {
+            position: absolute;
+            background: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            color: #d81b60;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            border: 3px solid #ff69b4;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 5;
+            white-space: nowrap;
+        }
+
+        /* Animace pro vznášení */
+        @keyframes vznaseni {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(5px, -10px); }
+        }
+
+        /* Rozmístění bublin kolem koně */
+        .b1 { top: 10%; left: 10%; animation: vznaseni 4s infinite ease-in-out; }
+        .b2 { top: 15%; right: 10%; animation: vznaseni 5s infinite ease-in-out 0.5s; }
+        .b3 { top: 40%; left: 5%; animation: vznaseni 4.5s infinite ease-in-out 1s; }
+        .b4 { top: 45%; right: 5%; animation: vznaseni 5.5s infinite ease-in-out 1.5s; }
+        .b5 { bottom: 15%; left: 15%; animation: vznaseni 4.2s infinite ease-in-out 2s; }
+        .b6 { bottom: 10%; right: 15%; animation: vznaseni 4.8s infinite ease-in-out 2.5s; }
+
+        .jmeno {
+            position: absolute;
+            top: 20px;
+            font-size: 2.2rem;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            font-weight: bold;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="jmeno">Štancová Natálie</div>
+
+    <div class="kun-stred">🐎</div>
+
+    <div class="bublina-info b1">Je mi 19 ❤️</div>
+    <div class="bublina-info b2">Můj kůň se jmenuje Čedar 🧀</div>
+    <div class="bublina-info b3">Nemám ráda španělštinu ❌</div>
+    <div class="bublina-info b4">Mám ráda Káju s Kájou 🌸</div>
+    <div class="bublina-info b5">Budu maturovat 📚</div>
+    <div class="bublina-info b6">Mám ráda kočky 🐱</div>
+
+</body>
+</html>
