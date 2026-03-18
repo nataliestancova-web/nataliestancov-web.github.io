@@ -17,6 +17,28 @@
             position: relative;
         }
 
+        /* Horní lišta */
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.4);
+            padding: 10px 20px;
+            box-sizing: border-box;
+            z-index: 20;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
         /* Velké emoji koně uprostřed */
         .kun-stred {
             font-size: 120px;
@@ -64,7 +86,7 @@
 
         .jmeno {
             position: absolute;
-            top: 20px;
+            top: 60px; /* posunuto dolů kvůli liště */
             font-size: 2.2rem;
             color: white;
             text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
@@ -74,6 +96,11 @@
     </style>
 </head>
 <body>
+
+    <!-- Horní lišta s tlačítkem Domů -->
+    <div class="navbar">
+        <a href="index.html">🏠 Domů</a>
+    </div>
 
     <div class="jmeno">Štancová Natálie</div>
 
