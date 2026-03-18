@@ -42,6 +42,8 @@
             box-shadow: 0 4px 0 #c71585;
             transition: all 0.2s;
             margin-top: 20px;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .tlacitko:hover {
@@ -79,28 +81,21 @@
 </head>
 <body>
 
+    <!-- Koníci na pozadí -->
     <div class="kun">🐎</div>
     <div class="kun">🐎</div>
     <div class="kun">🐎</div>
-    <div class="kun :nth-child(4)">🐎</div>
+    <div class="kun">🐎</div>
     <div class="kun">🐎</div>
 
+    <!-- Hlavní obsah -->
     <div class="obsah">
         <h1>Štancová Natálie</h1>
         <p>Ahoj, jmenuji se Naty a mám ráda koně.</p>
         
-        <button class="tlacitko" onclick="rerdat()">íhaha</button>
+        <!-- Tlačítko přesměrující na druhou stránku -->
+        <a href="2index.html" class="tlacitko">íhaha</a>
     </div>
-
-    <script>
-        function rerdat() {
-            alert("ÍÍÍ-HA-HA! 🐎\nTvoje stránka tě zdraví!");
-            document.body.style.backgroundColor = "#ff69b4"; // Po kliknutí zrůžoví ještě víc
-            setTimeout(() => {
-                document.body.style.backgroundColor = "#ffb6c1";
-            }, 500);
-        }
-    </script>
 
 </body>
 </html>
