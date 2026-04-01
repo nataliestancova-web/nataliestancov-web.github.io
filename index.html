@@ -31,7 +31,7 @@
 
         /* --- STYL TLAČÍTKA --- */
         .tlacitko {
-            background-color: #ff1493; /* Sytě růžová */
+            background-color: #ff1493;
             color: white;
             border: none;
             padding: 15px 30px;
@@ -71,7 +71,6 @@
             100% { transform: translateY(-110vh) rotate(20deg); opacity: 0; }
         }
 
-        /* Rozmístění koníků */
         .kun:nth-child(1) { left: 5%;  animation: beh 8s infinite; animation-delay: 0s; }
         .kun:nth-child(2) { left: 20%; animation: beh 10s infinite; animation-delay: 2s; }
         .kun:nth-child(3) { left: 40%; animation: beh 7s infinite; animation-delay: 5s; }
@@ -81,20 +80,25 @@
 </head>
 <body>
 
-    <!-- Koníci na pozadí -->
+    <!-- Koníci -->
     <div class="kun">🐎</div>
     <div class="kun">🐎</div>
     <div class="kun">🐎</div>
     <div class="kun">🐎</div>
     <div class="kun">🐎</div>
 
-    <!-- Hlavní obsah -->
+    <!-- Obsah -->
     <div class="obsah">
         <h1>Štancová Natálie</h1>
         <p>Ahoj, jmenuji se Naty a mám ráda koně.</p>
         
-        <!-- Tlačítko přesměrující na druhou stránku -->
+        <!-- Původní tlačítko -->
         <a href="2index.html" class="tlacitko">íhaha</a>
+
+        <br><br>
+
+        <!-- NOVÉ tlačítko -->
+        <a href="Křivoklát.pdf" class="tlacitko">🏰 moje oblíbené místo</a>
     </div>
 
 </body>
